@@ -24,9 +24,10 @@ h1 {
 }
 
 .box{
-    width: 90px;
+    background-color: blueviolet;
+    width: 100px;
     aspect-ratio:  1 / 1;
-    margin: 10px;
+    margin:7px;
     display: flex;
     justify-content: center;
     align-items: center;

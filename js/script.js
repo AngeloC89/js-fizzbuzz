@@ -36,13 +36,12 @@ const box = document.querySelector('.box');
 console.log(box)
 
 //qui diciamo al ciclo " for " di immettere in tmpHtml tanti div di classe"box" quanti cicli si ripetono
-for (let i = 0; i < 100; i++) {
-    const color = (i % 3 === 0) ? 'red' : '';
-    tmpHtml += ` <div class="box ${color}">${i + 1}</div>`;
-
-
-
-};
+for (let i = 1; i < 101; i++) {
+    const colorRed = (i % 3 === 0) ? 'red' : '';
+    const colorGreen = (i % 5 === 0) ? 'green' : '';
+    const colorYellow = (i % 15 === 0) ? 'yellow' : '';
+    tmpHtml += ` <div class="box ${colorRed} ${colorGreen} ${colorYellow}">${i}</div>`;
+}
 
 
 square.innerHTML = tmpHtml;
