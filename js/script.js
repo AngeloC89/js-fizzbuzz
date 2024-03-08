@@ -27,16 +27,23 @@ title.className = 'text-center display-1 fw-bold text-white'
 const square = document.createElement('div');
 // console.log(typeof square); 
 
-square.className = 'd-flex justify-content-between align-content-center flex-wrap';
-square.setAttribute('id','bigbox');
+square.className = 'd-flex justify-content-between align-content-center flex-wrap gap-3';
+square.setAttribute('id', 'bigbox');
 // console.dir(square)
 
 let tmpHtml = '';
+const box = document.querySelector('.box');
+console.log(box)
 
 //qui diciamo al ciclo " for " di immettere in tmpHtml tanti div di classe"box" quanti cicli si ripetono
-for(let i = 0; i < 100; i++){
-    tmpHtml += ` <div class="box">${i + 1}</div>`;
-}
+for (let i = 0; i < 100; i++) {
+    const color = (i % 3 === 0) ? 'red' : '';
+    tmpHtml += ` <div class="box ${color}">${i + 1}</div>`;
+
+
+
+};
+
 
 square.innerHTML = tmpHtml;
 // console.log(square);

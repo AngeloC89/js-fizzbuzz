@@ -26,7 +26,7 @@ h1 {
 .box{
     width: 90px;
     aspect-ratio:  1 / 1;
-    margin: 15px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
