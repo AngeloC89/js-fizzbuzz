@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: orange;
+}
+
+.h1 {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    animation: glow 0.7s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #fbfbfb, 0 0 20px #b381de, 0 0 30px #b347b6;
+    }
+    100% {
+      text-shadow: 0 0 20px #338869, 0 0 30px #1c661c, 0 0 40px #fdfdfd;
+    }
+  }
