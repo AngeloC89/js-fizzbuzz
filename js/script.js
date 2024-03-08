@@ -40,7 +40,9 @@ for (let i = 1; i < 101; i++) {
     const colorRed = (i % 3 === 0) ? 'red' : '';
     const colorGreen = (i % 5 === 0) ? 'green' : '';
     const colorYellow = (i % 15 === 0) ? 'yellow' : '';
-    tmpHtml += ` <div class="box ${colorRed} ${colorGreen} ${colorYellow}">${i}</div>`;
+    const testo = (i % 15 === 0) ? 'FizzBuzz' : (i % 5 === 0) ? 'Buzz' : (i % 3 === 0) ? 'Fizz' : i;
+   
+    tmpHtml += ` <div class="box ${colorRed} ${colorGreen} ${colorYellow}">${testo}</div>`;
 }
 
 
