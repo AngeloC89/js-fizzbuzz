@@ -18,11 +18,9 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 
 // definisco delle varibili per inserire contenuto nel mio DOM
-const title = document.createElement('h1');
-title.textContent = "FizzBuzzDOM";
-const body = document.body;
-body.appendChild(title);
-title.className = 'h1 text-center display-1 fw-bold text-white'
+const title = document.querySelector('h1');
+title.className = 'text-center display-1 fw-bold text-white'
+
 
 // console.log(title)
 
@@ -32,6 +30,23 @@ const square = document.createElement('div');
 square.className = 'd-flex justify-content-between align-content-center flex-wrap';
 square.setAttribute('id','bigbox');
 // console.dir(square)
+
+let tmpHtml = '';
+
+//qui diciamo al ciclo " for " di immettere in tmpHtml tanti div di classe"box" quanti cicli si ripetono
+for(let i = 0; i < 100; i++){
+    tmpHtml += ` <div class="box">${i + 1}</div>`;
+}
+
+square.innerHTML = tmpHtml;
+// console.log(square);
+const container = document.querySelector('.container');
+container.append(square);
+
+
+
+
+
 
 
 
