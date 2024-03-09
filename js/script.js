@@ -19,9 +19,7 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 
 // definisco delle varibili per inserire contenuto nel mio DOM
 const title = document.querySelector('h1');
-title.className = 'text-center display-1 fw-bold text-white'
-
-
+title.className = 'text-center display-1 fw-bold text-white m-5'
 // console.log(title)
 
 const square = document.createElement('div');
@@ -32,24 +30,28 @@ square.setAttribute('id', 'bigbox');
 // console.dir(square)
 
 let tmpHtml = '';
-const box = document.querySelector('.box');
-console.log(box)
+
 
 //qui diciamo al ciclo " for " di immettere in tmpHtml tanti div di classe"box" quanti cicli si ripetono
 for (let i = 1; i < 101; i++) {
-    const colorRed = (i % 3 === 0) ? 'red' : '';
-    const colorGreen = (i % 5 === 0) ? 'green' : '';
-    const colorYellow = (i % 15 === 0) ? 'yellow' : '';
+    const colorGrey = (i % 3 === 0) ? 'grey' : '';
+    const colorCyan = (i % 5 === 0) ? 'cyan' : '';
+    const colorGreen = (i % 15 === 0) ? 'green' : '';
     const testo = (i % 15 === 0) ? 'FizzBuzz' : (i % 5 === 0) ? 'Buzz' : (i % 3 === 0) ? 'Fizz' : i;
    
-    tmpHtml += ` <div class="box ${colorRed} ${colorGreen} ${colorYellow}">${testo}</div>`;
+    tmpHtml += ` <div class="box ${colorGrey} ${colorCyan} ${colorGreen}">${testo}</div>`;
 }
 
+
+const box = document.querySelector('.box');
+console.log(box)
 
 square.innerHTML = tmpHtml;
 // console.log(square);
 const container = document.querySelector('.container');
 container.append(square);
+
+
 
 
 

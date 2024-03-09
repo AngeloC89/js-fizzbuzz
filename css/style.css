@@ -5,49 +5,71 @@
 }
 
 body {
-    background-color: orange;
+    background-color: rgb(2, 1, 1);
 }
 
 h1 {
     text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
     animation: glow 0.7s ease-in-out infinite alternate;
+    animation: h1-wave 4s infinite;
 }
 
-@keyframes glow {
+@keyframes h1-wave {
     0% {
-        text-shadow: 0 0 10px #fbfbfb, 0 0 20px #b381de, 0 0 30px #b347b6;
+        transform: translateY(0);
+        text-shadow: 0 0 90px #fbfbfb, 0 0 90px #9bf903, 0 0 90px #eeff03;
     }
+    25%{
+
+    }
+
+    50% {
+        transform: translateY(20px);
+        text-shadow: 0 0 90px #338869, 0 0 90px #17b5be, 0 0 90px #fdfdfd;
+    }
+    75%{
+
+    }
+
 
     100% {
-        text-shadow: 0 0 20px #338869, 0 0 30px #1c661c, 0 0 40px #fdfdfd;
+        transform: translateY(0);
+        text-shadow: 0 0 90px #eb0808, 0 0 90px #f67701, 0 0 90px #bbff00;
     }
 }
 
-.box{
-    background-color: blueviolet;
+
+.box {
+    background-color: rgb(255, 128, 0);
+    box-shadow: 0px 0px 13px 8px rgb(255, 132, 0);
     width: 100px;
-    aspect-ratio:  1 / 1;
-    margin:7px;
+    aspect-ratio: 1 / 1;
+    margin: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform .2s;
-    
+    font-size: 1.2em;
+   
+
 }
 
 .box:hover {
-    transform: scale(1.3); 
+    transform: scale(1.15);
     cursor: pointer;
-  }
+}
+/* colori dei quadrati 3, 5, e 15... */
+.cyan {
+    background-color: rgb(6, 244, 244);
+    box-shadow: 0px 0px 13px 9px #00fbff;
+}
+
+.grey {
+    background-color: rgba(174, 172, 172, 0.661);
+    box-shadow: 0px 0px 15px 9px #868786;
+}
 
 .green{
-    background-color: green;
-}
-
-.red{
-    background-color: red;
-}
-
-.yellow{
-    background-color: yellow;
+    background-color: rgb(47, 255, 0);
+    box-shadow: 0px 0px 11px 9px #68fb52;
 }
